@@ -1,0 +1,13 @@
+// Important Docker-Compose Commands 
+
+Starts containers using existing images
+docker-compose up	
+
+Rebuilds images first, then starts containers
+docker-compose up --build	
+
+This is how run dokcer compose 
+docker-compose up --build
+
+This is how down docker compose 
+docker-compose down
