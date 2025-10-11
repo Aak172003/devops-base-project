@@ -1,5 +1,6 @@
 name: built-and-lint
 
+
 # Trigger workflow on pull request or push to specific branches
 on:
   pull_request:
