@@ -5,6 +5,7 @@ docker build -t mern-backend .
 This is how run docker image 
 docker run -p 8080:8080 --name backend --env-file .env mern-backend
 
+----------------------------------------------------------------------------------------------------------------------
 
 For Frontend
 This is how build docker image 
