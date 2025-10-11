@@ -45,7 +45,7 @@ jobs:
         run: npm run lint -- --max-warnings 0
 
       - name: Build Backend Image
-        run: docker build -t mern-backend .
+        run: docker build -t mern-backend ./server
 
       - name: Build Frontend Image
-        run: docker build -t mern-frontend .
+        run: docker build -t mern-frontend ./client
