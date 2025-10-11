@@ -130,17 +130,17 @@
   .task-item {
     padding: 16px;
   }
-  
+
   .task-header {
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
   }
-  
+
   .task-actions {
     align-self: flex-end;
   }
-  
+
   .task-title h3 {
     font-size: 1rem;
   }
