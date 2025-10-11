@@ -1,0 +1,5 @@
+docker build -t mern-backend .
+
+
+This is how run docker 
+docker run -p 8080:8080 --name backend --env-file .env mern-backend
