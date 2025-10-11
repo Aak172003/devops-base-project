@@ -6,9 +6,9 @@ import './App.css';
 function App() {
   const [refreshTrigger, setRefreshTrigger] = useState(0);
 
-  const handleTaskCreated = (newTask) => {
+  const handleTaskCreated = () => {
     // Trigger a refresh of the task list
-    setRefreshTrigger(prev => prev + 1);
+    setRefreshTrigger((prev) => prev + 1);
   };
 
   return (
