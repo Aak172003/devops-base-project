@@ -1,0 +1,51 @@
+name: built-and-lint
+
+
+# Trigger workflow on pull request or push to specific branches
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+    #   Define single or multiple jobs
+jobs:
+  built-and-lint:
+    runs-on: ubuntu-latest
+    #   Define the steps to be executed
+    steps:
+      # This basically checkout to your repository
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      # This basically setup the node.js environment
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+
+      # This basically print the node version
+      - name: Print NODE Version
+        run: node -v
+
+      - name: Install Backend Dependencies
+        working-directory: server
+        run: npm ci
+
+      - name: Lint Backend
+        working-directory: server
+        run: npm run lint -- --max-warnings 0
+
+      - name: Install Frontend Dependencies
+        working-directory: client
+        run: npm ci
+
+      - name: Lint Frontend
+        working-directory: client
+        run: npm run lint -- --max-warnings 0
+
+      - name: Build Backend Image
+        run: docker build -t mern-backend ./server
+
+      - name: Build Frontend Image
+        run: docker build -t mern-frontend ./client
