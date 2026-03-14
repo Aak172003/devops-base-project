@@ -35,7 +35,7 @@ jobs:
 
       - name: Fix Backend Linting
         working-directory: server
-        run: npm run eslint . --fix
+        run: npm run lint:fix
 
       - name: Lint Backend
         working-directory: server
@@ -47,7 +47,7 @@ jobs:
 
       - name: Fix Frontend Linting
         working-directory: server
-        run: num run eslint . --fix
+        run: num run lint:fix
 
 
       - name: Lint Frontend
