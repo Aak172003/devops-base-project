@@ -4,16 +4,16 @@ import TaskList from './components/TaskList';
 import './App.css';
 
 function App() {
-  // const user = {
-  //   name: "Aaksh",
-  //   age: 20,
-  //   city: "New York"
-  // }
-
-  // console.log(user.name);
-  // console.log(user.name);
-  // console.log(user.age);
-  // console.log(user.city);
+  const user = {
+    name: "Aaksh",
+    age: 20,
+    city: "New York"
+  }
+  // Eslint dot-anotation fix automatically
+  console.log(user["name"]);
+  console.log(user.name);
+  console.log(user["age"]);
+  console.log(user["city"]);
   const [refreshTrigger, setRefreshTrigger] = useState(0);
 
   const handleTaskCreated = () => {
