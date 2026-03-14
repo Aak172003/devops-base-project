@@ -14,6 +14,9 @@ RUN npm install
 # This will copy the rest of the application code to the container
 COPY . .
 
+ARG VITE_API_URL
+ENV VITE_API_URL=$VITE_API_URL
+
 RUN npm run build
 
 EXPOSE 5173
