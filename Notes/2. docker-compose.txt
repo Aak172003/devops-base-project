@@ -3,11 +3,15 @@
 Starts containers using existing images
 docker-compose up	
 
+This is how run dokcer compose 
 Rebuilds images first, then starts containers
 docker-compose up --build	
 
-This is how run dokcer compose 
-docker-compose up --build
-
 This is how down docker compose 
 docker-compose down
+
+This is how we can check logs 
+docker compoase logs 
+
+This is how we get logs of individual container 
+docker compose logs backend 

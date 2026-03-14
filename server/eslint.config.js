@@ -1,9 +1,13 @@
 export default [
     {
-        files: ['**/src/**/*.js'], // check all js files in src directory and subdirectories
+        // check all js files in src directory and subdirectories
+        files: ['**/src/**/*.js'],
         rules: {
             // semi: "error",
-            'no-unused-vars': 'warn', // warn if variables are not used in the code
+
+            // warn if variables are not used in the code
+            'no-unused-vars': 'warn',
+            "dot-notation": "error"
         },
     },
 ];

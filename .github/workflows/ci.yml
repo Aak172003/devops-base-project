@@ -4,15 +4,16 @@ name: built-and-lint
 # Trigger workflow on pull request or push to specific branches
 on:
   pull_request:
-    branches:
-      - main
+    branches: [main, dev]
+      # - main
   push:
-    branches:
-      - main
+    branches: [main, dev]
+      # - main
 
     #   Define single or multiple jobs
 jobs:
   built-and-lint:
+
     runs-on: ubuntu-latest
     #   Define the steps to be executed
     steps:
