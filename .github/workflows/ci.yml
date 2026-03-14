@@ -47,7 +47,7 @@ jobs:
 
       - name: Fix Frontend Linting
         working-directory: client
-        run: num run lint:fix
+        run: npm run lint:fix
 
 
       - name: Lint Frontend
