@@ -3,7 +3,7 @@ services:
   # This acctually looking for docker file in the server directory
     build: ./server
     container_name: backend
-
+    # 
     restart: always
     # passes the environment variables to the container
     env_file:

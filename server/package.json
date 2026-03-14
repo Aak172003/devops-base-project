@@ -5,10 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon src/index.js",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "format:check": "prettier . --check",
-    "format:fix": "prettier . --write"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint . --fix --ext .js,.jsx,.ts,.tsx",
+    "format:check": "prettier . --check --ext .js,.jsx,.ts,.tsx",
+    "format:fix": "prettier . --write --ext .js,.jsx,.ts,.tsx"
   },
   "keywords": [],
   "author": "",
