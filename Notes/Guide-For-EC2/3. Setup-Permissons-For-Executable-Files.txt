@@ -1,0 +1,62 @@
+1️⃣ Permission structure
+
+Permissions are written in three groups:
+
+Owner | Group | Others
+
+Each group can have:
+
+r → read
+
+w → write
+
+x → execute
+
+These are represented by numbers:
+
+Permission	Value
+read (r)	4
+write (w)	2
+execute (x)	1
+
+Numbers are added together.
+
+Example:
+
+7 = 4 + 2 + 1 = rwx
+6 = 4 + 2     = rw-
+5 = 4 + 1     = r-x
+4 = 4         = r--
+2️⃣ What 400 means
+400
+│ │ │
+│ │ └── Others → 0 (no permission)
+│ └──── Group  → 0 (no permission)
+└────── Owner  → 4 (read only)
+
+So:
+
+User	Permission
+Owner	Read only
+Group	No access
+Others	No access
+
+Meaning:
+
+r--------
+
+Only you (the owner) can read the key file.
+
+3️⃣ Why SSH requires 400
+
+SSH private keys must be secure.
+
+If other users can access the key, SSH will refuse it and show errors like:
+
+Permissions 0644 for 'keypair.pem' are too open
+
+So AWS recommends:
+
+chmod 400 keypair.pem
+
+to ensure only you can read the private key 🔐

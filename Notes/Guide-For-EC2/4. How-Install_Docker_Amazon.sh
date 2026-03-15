@@ -1,0 +1,24 @@
+#!/bin/bash
+
+echo "Updating system packages..."
+sudo dnf update -y
+
+echo "Installing Docker..."
+sudo dnf install -y docker
+
+echo "Adding ec2-user to docker group..."
+sudo usermod -aG docker ec2-user
+
+echo "Enabling and starting Docker service..."
+sudo systemctl enable --now docker
+
+echo "Verifying Docker Installation..."
+sudo docker --version || echo "Docker not found in current session (re-login may be required)."
+
+echo ""
+echo "Docker installation complete on Amazon Linux 2023!"
+echo "IMPORTANT: Log out and log back in (or run 'newgrp docker')"
+echo "so that 'ec2-user' can run docker without sudo."
+echo ""
+echo "After re-login, test with:"
+echo "docker run hello-world"
