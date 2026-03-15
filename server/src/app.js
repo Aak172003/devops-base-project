@@ -14,7 +14,10 @@ app.use(
     cors({
         allowedHeaders: ['Content-Type', 'token', 'authorization'],
         exposedHeaders: ['token', 'authorization'],
-        origin: ['http://localhost:5173'],
+        origin: [
+            'http://localhost:5173',
+            // `http://${ADD_INSTANCE_IP}:5173`
+        ],
         methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
         credentials: true,
         preflightContinue: false,
