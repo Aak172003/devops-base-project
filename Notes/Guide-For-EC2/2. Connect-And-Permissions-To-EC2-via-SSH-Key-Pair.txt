@@ -1,0 +1,26 @@
+1️⃣ Move the .pem file to a safe location
+
+Put your key in a known folder like ~/.ssh.
+Example:
+
+mv ~/Downloads/keypair3.pem ~/.ssh/
+
+
+2️⃣ Set correct permissions (Very Important ⚠️)
+
+Mac/Linux will refuse the key if permissions are open.
+
+chmod 400 ~/.ssh/keypair3.pem
+
+3️⃣ Get your EC2 Public IP
+In AWS Console → EC2 → Instances
+
+Copy the Public IPv4 address
+
+Example: 3.26.242.54
+
+4️⃣ Connect using SSH from Mac Terminal
+
+Run:
+
+ssh -i ~/.ssh/keypair3.pem ec2-user@3.110.148.121
