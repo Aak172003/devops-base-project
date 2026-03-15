@@ -15,8 +15,8 @@ app.use(
         allowedHeaders: ['Content-Type', 'token', 'authorization'],
         exposedHeaders: ['token', 'authorization'],
         origin: [
-            'http://localhost:5173',
-            // `http://${ADD_INSTANCE_IP}:5173`
+            // 'http://localhost:5173',
+            `http://65.2.151.94:5173`
         ],
         methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
         credentials: true,
