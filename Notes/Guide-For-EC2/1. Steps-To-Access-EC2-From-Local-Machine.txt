@@ -1,4 +1,4 @@
-ssh -i ~/.ssh/keypair-mern-devops.pem ec2-user@13.233.83.29
+ssh -i ~/.ssh/keypair-mern-devops.pem ec2-user@65.2.151.94
 
 chmod 400 ~/.ssh/keypair-mern-devops.pem  
 
